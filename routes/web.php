@@ -18,3 +18,4 @@ Route::get('/mahasiswa', 'MahasiswaController@index');
 
 //students
 Route::get('/students', 'StudentsController@index');
+Route::get('/students/{student}', 'StudentsController@show');
