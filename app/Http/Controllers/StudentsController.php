@@ -92,6 +92,11 @@ class StudentsController extends Controller
      */
     public function update(Request $request, Student $student)
     {
+        $request->validate([
+            'nama' => 'required',
+            'nim' => 'required|size:7'
+        ]);
+        
         Student::where('id', $student->id)
             ->update([
                 'nama' => $request->nama,
